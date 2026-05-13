@@ -129,13 +129,13 @@ Spam emails = 3
 
 Not Spam emails = 2
 
-\[
+$$
 P(Spam) = \frac{3}{5}
-\]
+$$
 
-\[
+$$
 P(NotSpam) = \frac{2}{5}
-\]
+$$
 
 ---
 
@@ -161,31 +161,31 @@ For Not Spam:
 
 For Spam:
 
-\[
+$$
 P(Spam|Offer,Win)
-\]
+$$
 
-\[
+$$
 = P(Spam) \times P(Offer|Spam) \times P(Win|Spam)
-\]
+$$
 
-\[
+$$
 = \frac{3}{5} \times \frac{2}{3} \times \frac{2}{3}
-\]
+$$
 
-\[
+$$
 = 0.266
-\]
+$$
 
 For Not Spam:
 
-\[
+$$
 = \frac{2}{5} \times 0 \times 0
-\]
+$$
 
-\[
+$$
 = 0
-\]
+$$
 
 ---
 
@@ -193,9 +193,9 @@ For Not Spam:
 
 Since:
 
-\[
+$$
 0.266 > 0
-\]
+$$
 
 The email is classified as:
 
@@ -251,9 +251,9 @@ Used to avoid zero probability.
 
 Formula:
 
-\[
+$$
 P = \frac{Count + 1}{Total + Number\ of\ Classes}
-\]
+$$
 
 ---
 
