@@ -1,1 +1,3 @@
-ML Revision Notes → https://anikchandml.hashnode.dev/
+# 📚 ML Revision Notes
+
+🔗 [Read Here](https://anikchandml.hashnode.dev/)
