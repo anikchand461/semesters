@@ -1,3 +1,5 @@
+// prevois program using command line
+
 import java.util.*;
 
 class q2 {

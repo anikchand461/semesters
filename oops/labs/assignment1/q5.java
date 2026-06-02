@@ -1,3 +1,5 @@
+// print star pattern
+
 import java.util.*;
 
 class q5 {

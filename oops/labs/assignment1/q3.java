@@ -1,3 +1,5 @@
+// add, subtract, etc using switch case
+
 import java.util.*;
 
 class q3 {

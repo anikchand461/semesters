@@ -1,3 +1,5 @@
+// div by 5 or not 
+
 import java.util.*;
 
 class q12 {

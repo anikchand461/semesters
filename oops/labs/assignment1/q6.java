@@ -1,3 +1,5 @@
+// print string char float variable 
+
 import java.util.*;
 
 class q6 {

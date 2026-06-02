@@ -1,3 +1,5 @@
+// leap yr or not
+
 import java.util.*;
 
 class q10 {

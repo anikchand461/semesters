@@ -1,3 +1,5 @@
+// swap 2 variables
+
 import java.util.*;
 
 class q8 {

@@ -1,3 +1,4 @@
+// print name, address and other info
 import java.util.*;
 
 class q1 {

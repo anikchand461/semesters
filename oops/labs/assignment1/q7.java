@@ -1,3 +1,5 @@
+// max among 3 numbers
+
 import java.util.*;
 
 class q7 {
