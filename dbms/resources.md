@@ -1,0 +1,1 @@
+neso academy - [link](https://nesoacademy.org/cs/14-database-management-systems-dbms/ppts)
