@@ -1,0 +1,3 @@
+student-1 : name - Anik, marks - 99
+student-2 : name - Ayan, marks - 89
+student-3 : name - Anu, marks - 1
