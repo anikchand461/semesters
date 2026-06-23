@@ -1,0 +1,40 @@
+/*
+
+Panel
+
+A panel is a styled container (box).
+
+Used for:
+- Profile Cards
+- Information Boxes
+- Dashboards
+- Product Cards
+- Blog Cards
+
+Common Properties:
+- width
+- border
+- padding
+- margin
+- background-color
+
+*/
+
+
+.panel {
+
+    /* Width of the panel */
+    width: 300px;
+
+    /* Border around the panel */
+    border: 3.5px solid blue;
+
+    /* Space inside the border */
+    padding: 20px;
+
+    /* Space outside the border */
+    margin: 100px;
+
+    /* Background color of the panel */
+    background-color: yellow;
+}

@@ -1,0 +1,53 @@
+/*
+display: block
+Starts on a new line
+Takes full available width
+*/
+
+.block-demo {
+    display: block;
+
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/*
+display: inline
+Stays on the same line
+Width and height do not work properly
+*/
+
+.inline-demo {
+    display: inline;
+
+    border: 2px solid red;
+    padding: 10px;
+}
+
+/*
+display: inline-block
+Stays on same line
+Width and height work
+*/
+
+.inline-block-demo {
+    display: inline-block;
+
+    width: 120px;
+    height: 120px;
+
+    border: 2px solid green;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+/*
+display: none
+Completely hides the element
+*/
+
+.hidden-text {
+    display: none;
+}

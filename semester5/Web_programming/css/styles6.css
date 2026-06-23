@@ -1,0 +1,130 @@
+/*
+
+=================================
+CSS Images
+=================================
+
+Used Properties:
+
+1. width
+   Controls image width
+
+2. height
+   Controls image height
+
+3. border
+   Adds border around image
+
+4. border-radius
+   Creates rounded corners
+
+5. object-fit
+   Prevents image stretching
+
+=================================
+*/
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 20px;
+}
+
+
+/*
+
+=================================
+Normal Image
+=================================
+
+*/
+
+.normal-image {
+
+    width: 300px;
+
+    height: 200px;
+
+    border: 3px solid blue;
+}
+
+
+/*
+
+=================================
+Rounded Image
+=================================
+
+border-radius: 20px
+
+Creates rounded corners
+
+*/
+
+.rounded-image {
+
+    width: 300px;
+
+    height: 200px;
+
+    border: 3px solid green;
+
+    border-radius: 20px;
+}
+
+
+/*
+
+=================================
+Circular Image
+=================================
+
+border-radius: 50%
+
+Used for profile photos
+
+object-fit: cover
+
+Prevents image stretching
+
+*/
+
+.profile-image {
+
+    width: 250px;
+
+    height: 250px;
+
+    border: 4px solid red;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/*
+
+=================================
+Quick Revision
+=================================
+
+width            -> image width
+
+height           -> image height
+
+border           -> image border
+
+border-radius    -> rounded corners
+
+50%              -> circle
+
+object-fit       -> prevents stretching
+
+cover            -> keeps image natural
+
+=================================
+
+*/

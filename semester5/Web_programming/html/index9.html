@@ -1,0 +1,41 @@
+<!--
+An Image Map is an image containing clickable areas. Different regions of the image can be linked to different webpages using the <map> and <area> tags.
+An Image Map allows different parts of the same image to act as different links.
+
+Example:
+
+Click the laptop → opens Google
+Click the phone → opens YouTube
+Click the book → opens GitHub
+
+All from one image.
+
+| Tag      | Purpose                |
+| -------- | ---------------------- |
+| `<img>`  | Display image          |
+| `<map>`  | Define image map       |
+| `<area>` | Define clickable area  |
+| `usemap` | Connect image with map |
+
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="image.png" usemap="#demo">
+
+<map name="demo">
+    <area
+        shape="rect"
+        coords="0,0,500,500"
+        href="https://google.com">
+
+    <area
+        shape="rect"
+        coords="500,0,1000,500"
+        href="https://youtube.com">
+</map>
+
+</body>
+</html>
