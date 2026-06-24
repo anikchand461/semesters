@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>ng-model</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+    <input type="text" placeholder="input name" ng-model="name">
+    <h1>{{ name }}</h1>
+
+    <input type="text" placeholder="input age" ng-model="age">
+    <h1>{{ age * 10 }}</h1>
+
+    <input type="text" placeholder="first name" ng-model="first">
+    <input type="text" placeholder="last name" ng-model="last">
+    <h1>{{ first }} {{ last }}</h1>
+
+
+    <h1>Mini Calculator</h1>
+
+    <input type="number" placeholder="type 1st number" ng-model="num1">
+    <input type="number" placeholder="type 2nd number" ng-model="num2">
+    <h1>addition = {{ num1 + num2 }}</h1>
+    <h1>subtraction = {{ num1 - num2 }}</h1>
+    <h1>product = {{ num1 * num2 }}</h1>
+
+</body>
+</html>
