@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Directives</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        hr{
+            margin:25px 0;
+        }
+
+        input{
+            padding:8px;
+            margin:5px;
+        }
+
+        button{
+            padding:8px 15px;
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController">
+
+    <h1>AngularJS Directives</h1>
+
+    <hr>
+
+    <h2>1. ng-init</h2>
+    <!-- Used to initialize variables directly in HTML. -->
+    <div ng-init="x=10; y=20">
+        x = {{x}}
+        <br>
+        y = {{y}}
+        <br>
+        Sum = {{x+y}}
+    </div>
+
+    <hr>
+
+    <h2>2. ng-model</h2>
+    <!-- Creates a variable and connects it with the input. -->
+
+    <input type="text" placeholder="Enter your name" ng-model="name">
+    <input type="text" placeholder="Eneter college" ng-model="college">
+
+    <h3>Hello {{name}} from college {{ college }}</h3>
+
+    <hr>
+
+    <h2>3. ng-bind</h2>
+
+    <input type="text" ng-model="college">
+
+    <h3 ng-bind="college"></h3>  <!-- same as : <h2>{{college}}</h2> -> just display the value -->
+
+    <hr>
+
+    <h2>4. ng-repeat</h2>
+    <!-- like a for loop -->
+
+    <ul>
+        <li ng-repeat="subject in subjects">
+            {{subject}}
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>5. ng-show</h2>
+    <!-- Shows the element when showText == true -->
+
+    <label>
+        <input type="checkbox" ng-model="showText">
+        Show Message
+    </label>
+
+    <h3 ng-show="showText">
+        This text is visible.
+    </h3>
+
+    <hr>
+
+    <h2>6. ng-hide</h2>
+    <!-- opposite of ng-show -->
+
+    <label>
+        <input type="checkbox" ng-model="hideText">
+        Hide Message
+    </label>
+
+    <h3 ng-hide="hideText">
+        This text will disappear.
+    </h3>
+
+    <hr>
+
+    <h2>7. ng-if</h2>
+    <!-- Only creates the HTML when display == true -->
+
+    <label>
+        <input type="checkbox" ng-model="display">
+        Display Message
+    </label>
+
+    <h3 ng-if="display">
+        This element exists only when checked.
+    </h3>
+
+    <hr>
+
+    <h2>8. ng-click</h2>
+    <!-- When button is clicked
+    Angular executes
+    increase(); -->
+
+    <button ng-click="increase()">
+        Increase
+    </button>
+
+    <h3>Count : {{count}}</h3>
+
+</body>
+
+</html>

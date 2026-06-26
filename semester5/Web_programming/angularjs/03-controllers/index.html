@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">  <!-- ng app name is myApp -->
+
+<head>
+    <title>AngularJS Controller</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<!-- this body is now controlled by the StdentController in js -->
+<body>
+
+    <div ng-controller="StudentController">
+
+        <input type="text", placeholder="enter name", ng-model="name">
+        <input type="text", placeholder="enter age", ng-model="age">
+        <input type="text", placeholder="enter college", ng-model="college">
+        
+        <h1>{{name}}</h1>
+        <h2>{{age}}</h2>
+        <h2>{{college}}</h2>
+        
+    </div>
+
+    <div ng-controller="NameController">
+
+        <input type="text", placeholder="enter first name", ng-model="first">
+        <input type="text", placeholder="enter last name", ng-model="last">
+        
+        <h2>{{ first }} {{ last }}</h2>
+    </div>
+
+</body>
+</html>

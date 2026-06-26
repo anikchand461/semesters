@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Events</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        input,button{
+            padding:8px;
+            margin:5px;
+        }
+
+        hr{
+            margin:25px 0;
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController">
+    
+    <h1>AngularJS Events</h1>
+    
+    <hr>
+    
+    <h2>1. ng-click</h2>
+    
+    <button ng-click="increase()">
+        Increase
+    </button>
+    
+    <h3>{{count}}</h3>
+    
+    <hr>
+    
+    <h2>2. ng-change</h2>
+    
+    <input
+    type="text"
+    ng-model="name"
+    ng-change="changed()">
+    
+    <h3>{{message}}</h3>
+    
+    <hr>
+    
+    <h2>3. ng-submit</h2>
+    
+    <form ng-submit="submitForm()">
+    
+        <input
+        type="text"
+        ng-model="username"
+        placeholder="Username">
+    
+        <button type="submit">
+            Submit
+        </button>
+    
+    </form>
+    
+    <h3>{{submitMessage}}</h3>
+    
+    <hr>
+    
+    <h2>4. ng-focus</h2>
+    
+    <input
+    type="text"
+    placeholder="Click here"
+    ng-focus="focusMessage='Input Focused'">
+    
+    <h3>{{focusMessage}}</h3>
+    
+    <hr>
+    
+    <h2>5. ng-blur</h2>
+    
+    <input
+    type="text"
+    placeholder="Click then leave"
+    ng-blur="blurMessage='Input Lost Focus'">
+    
+    <h3>{{blurMessage}}</h3>
+    
+    <hr>
+    
+    <h2>6. ng-keyup</h2>
+    
+    <input
+    type="text"
+    ng-model="typing"
+    ng-keyup="keyUp()">
+    
+    <h3>{{typingMessage}}</h3>
+    
+    <hr>
+    
+    <h2>7. ng-keydown</h2>
+    
+    <input
+    type="text"
+    ng-keydown="keyDown()">
+    
+    <h3>{{keyDownMessage}}</h3>
+    
+    <hr>
+    
+    <h2>8. ng-mouseover</h2>
+    
+    <div
+    ng-mouseover="hover=true"
+    ng-mouseleave="hover=false"
+    style="width:220px;padding:20px;border:1px solid black;">
+    
+    Move Mouse Here
+    
+    </div>
+    
+    <h3>{{hover ? "Mouse Inside" : "Mouse Outside"}}</h3>
+
+</body>
+
+</html>
