@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Validation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        input,button{
+            padding:8px;
+            margin:5px;
+        }
+
+        span{
+            color:red;
+        }
+
+        hr{
+            margin:25px 0;
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController">
+
+<h1>AngularJS Validation</h1>
+
+<form name="myForm" ng-submit="submitForm()" novalidate>
+
+<hr>
+
+<h2>1. Required Validation</h2>
+
+<input
+type="text"
+name="username"
+placeholder="Enter Username"
+ng-model="user.username"
+required>
+
+<span
+ng-show="myForm.username.$touched && myForm.username.$error.required">
+Username is required.
+</span>
+
+<hr>
+
+<h2>2. Email Validation</h2>
+
+<input
+type="email"
+name="email"
+placeholder="Enter Email"
+ng-model="user.email"
+required>
+
+<span
+ng-show="myForm.email.$touched && myForm.email.$error.required">
+Email is required.
+</span>
+
+<br>
+
+<span
+ng-show="myForm.email.$touched && myForm.email.$error.email">
+Invalid Email.
+</span>
+
+<hr>
+
+<h2>3. Number Validation</h2>
+
+<input
+type="number"
+name="age"
+placeholder="Enter Age"
+ng-model="user.age"
+min="18"
+max="60">
+
+<span
+ng-show="myForm.age.$error.min">
+Minimum age is 18.
+</span>
+
+<br>
+
+<span
+ng-show="myForm.age.$error.max">
+Maximum age is 60.
+</span>
+
+<hr>
+
+<h2>4. Min Length</h2>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+ng-model="user.password"
+ng-minlength="6">
+
+<span
+ng-show="myForm.password.$error.minlength">
+Minimum 6 characters required.
+</span>
+
+<hr>
+
+<h2>5. Max Length</h2>
+
+<input
+type="text"
+name="city"
+placeholder="City"
+ng-model="user.city"
+ng-maxlength="10">
+
+<span
+ng-show="myForm.city.$error.maxlength">
+Maximum 10 characters allowed.
+</span>
+
+<hr>
+
+<h2>6. Pattern Validation</h2>
+
+<input
+type="text"
+name="mobile"
+placeholder="10 Digit Mobile"
+ng-model="user.mobile"
+ng-pattern="/^[0-9]{10}$/">
+
+<span
+ng-show="myForm.mobile.$error.pattern">
+Enter a valid mobile number.
+</span>
+
+<hr>
+
+<h2>7. Form Status</h2>
+
+<p>Valid : {{myForm.$valid}}</p>
+<p>Invalid : {{myForm.$invalid}}</p>
+<p>Dirty : {{myForm.$dirty}}</p>
+<p>Pristine : {{myForm.$pristine}}</p>
+
+<hr>
+
+<button
+type="submit"
+ng-disabled="myForm.$invalid">
+Submit
+</button>
+
+</form>
+
+<h2>{{message}}</h2>
+
+</body>
+
+</html>

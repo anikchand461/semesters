@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Angular JS TODO App</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    
+    <body ng-controller="MainController">
+    
+        <div class="container">
+    
+            <h1>AngularJS Todo App</h1>
+    
+            <!-- Add Task -->
+    
+            <form class="add-task">
+
+                <input type="text" placeholder="enter task" ng-model="task">
+                <button ng-click="addtask()">Add task</button>
+    
+            </form>
+
+
+            <br>
+            <br>
+    
+    
+            <!-- Search -->
+    
+            <div class="search">
+                <input type="text" placeholder="search task" ng-model="searchTask">
+            </div>
+    
+    
+            <!-- Todo List -->
+    
+            <div class="todo-list">
+                <div class="todo-item" ng-repeat="todo in todos | filter:searchTask">
+                    <input type="checkbox" ng-model="todo.completed">
+
+                    <!-- normal view -->
+                    <span ng-if="!todo.editing">{{ todo.title }}</span>
+
+                    <!-- edit view -->
+                    <input type="text" ng-model="todo.title" ng-if="todo.editing">
+
+                    <!-- edit button -->
+                    <button ng-if="!todo.editing" ng-click="edittask(todo)">Edit</button>
+
+                    <!-- save button -->
+                    <button ng-if="todo.editing" ng-click="savetask(todo)">Save</button>
+                    
+                    <button ng-click="deletetask($index)">delete</button>
+                </div>
+            </div>
+    
+    
+            <!-- Statistics -->
+    
+            <div class="stats">
+    
+                <h3>Total Tasks : {{ todos.length }}</h3>
+            
+                <h3>Completed : {{ completedcount() }}</h3>
+            
+                <h3>Pending : {{ todos.length - completedcount() }}</h3>
+            </div>
+    
+        </div>
+    </body>
+    
+</html>

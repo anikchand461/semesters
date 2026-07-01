@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Forms</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        input,select,button,textarea{
+            padding:8px;
+            margin:5px;
+        }
+
+        hr{
+            margin:25px 0;
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController">
+
+<h1>AngularJS Forms</h1>
+
+<hr>
+
+<h2>1. ng-model</h2>
+
+<input
+type="text"
+ng-model="name"
+placeholder="Enter Name">
+
+<h3>Name : {{name}}</h3>
+
+<hr>
+
+<h2>2. ng-submit</h2>
+
+<form ng-submit="submitForm()">
+
+    <input
+    type="text"
+    ng-model="username"
+    placeholder="Username">
+
+    <button type="submit">
+        Submit
+    </button>
+
+</form>
+
+<h3>{{submitMessage}}</h3>
+
+<hr>
+
+<h2>3. ng-disabled</h2>
+
+<input
+type="checkbox"
+ng-model="disableButton">
+
+<br>
+
+<button ng-disabled="disableButton">
+    Click Me
+</button>
+
+<hr>
+
+<h2>4. ng-readonly</h2>
+
+<input
+type="checkbox"
+ng-model="readOnly">
+
+<br>
+
+<input
+type="text"
+ng-model="text"
+ng-readonly="readOnly">
+
+<hr>
+
+<h2>5. ng-checked</h2>
+
+<input
+type="checkbox"
+ng-checked="checked">
+
+<label>AngularJS</label>
+
+<br>
+
+<button ng-click="toggleCheck()">
+    Toggle
+</button>
+
+<hr>
+
+<h2>6. ng-selected</h2>
+
+<select>
+
+    <option>Java</option>
+
+    <option ng-selected="true">
+        Python
+    </option>
+
+    <option>C++</option>
+
+</select>
+
+<hr>
+
+<h2>7. ng-change</h2>
+
+<select
+ng-model="course"
+ng-change="courseChanged()">
+
+    <option value="">Select Course</option>
+    <option>AngularJS</option>
+    <option>React</option>
+    <option>Vue</option>
+
+</select>
+
+<h3>{{courseMessage}}</h3>
+
+</body>
+</html>

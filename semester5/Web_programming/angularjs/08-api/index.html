@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+
+    <title>AngularJS API</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        button{
+            padding:8px 15px;
+            margin:5px;
+        }
+
+        table{
+            border-collapse: collapse;
+            margin-top:20px;
+            width:100%;
+        }
+
+        table,th,td{
+            border:1px solid black;
+            padding:8px;
+        }
+
+        hr{
+            margin:25px 0;
+        }
+
+    </style>
+
+</head>
+
+<body ng-controller="MainController">
+
+<h1>AngularJS API ($http)</h1>
+
+<hr>
+
+<h2>1. GET Request</h2>
+
+<button ng-click="getUsers()">
+    Load Users
+</button>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+</tr>
+
+<tr ng-repeat="user in users">
+
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+
+</tr>
+
+</table>
+
+<hr>
+
+<h2>2. POST Request</h2>
+
+<button ng-click="addUser()">
+    Add User
+</button>
+
+<h3>{{postMessage}}</h3>
+
+<hr>
+
+<h2>3. PUT Request</h2>
+
+<button ng-click="updateUser()">
+    Update User
+</button>
+
+<h3>{{putMessage}}</h3>
+
+<hr>
+
+<h2>4. DELETE Request</h2>
+
+<button ng-click="deleteUser()">
+    Delete User
+</button>
+
+<h3>{{deleteMessage}}</h3>
+
+</body>
+
+</html>
